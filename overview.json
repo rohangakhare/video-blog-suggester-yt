@@ -1,0 +1,350 @@
+{
+  "rootFolder": "c:\\Rohan\\Code\\video-blog-suggester",
+  "analyzedAt": "2026-07-25T12:29:08.268Z",
+  "rootStructure": [
+    {
+      "name": ".gitignore",
+      "type": "file",
+      "size": 480,
+      "lines": 42
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "file",
+      "size": 327,
+      "lines": 6
+    },
+    {
+      "name": "CLAUDE.md",
+      "type": "file",
+      "size": 11,
+      "lines": 2
+    },
+    {
+      "name": "eslint.config.mjs",
+      "type": "file",
+      "size": 465,
+      "lines": 19
+    },
+    {
+      "name": "next-env.d.ts",
+      "type": "file",
+      "size": 251,
+      "lines": 7
+    },
+    {
+      "name": "next.config.ts",
+      "type": "file",
+      "size": 156,
+      "lines": 9
+    },
+    {
+      "name": "node_modules",
+      "type": "dir"
+    },
+    {
+      "name": "package-lock.json",
+      "type": "file",
+      "size": 234737,
+      "lines": 6830
+    },
+    {
+      "name": "package.json",
+      "type": "file",
+      "size": 589,
+      "lines": 28
+    },
+    {
+      "name": "postcss.config.mjs",
+      "type": "file",
+      "size": 94,
+      "lines": 8
+    },
+    {
+      "name": "project-list.md",
+      "type": "file",
+      "size": 1516,
+      "lines": 26
+    },
+    {
+      "name": "public",
+      "type": "dir"
+    },
+    {
+      "name": "README.md",
+      "type": "file",
+      "size": 1450,
+      "lines": 37
+    },
+    {
+      "name": "src",
+      "type": "dir"
+    },
+    {
+      "name": "tsconfig.json",
+      "type": "file",
+      "size": 670,
+      "lines": 35
+    }
+  ],
+  "rootFileSnippets": {
+    "AGENTS.md": [
+      "<!-- BEGIN:nextjs-agent-rules -->",
+      "# This is NOT the Next.js you know",
+      "",
+      "This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.",
+      "<!-- END:nextjs-agent-rules -->",
+      ""
+    ],
+    "CLAUDE.md": [
+      "@AGENTS.md",
+      ""
+    ],
+    "eslint.config.mjs": [
+      "import { defineConfig, globalIgnores } from \"eslint/config\";",
+      "import nextVitals from \"eslint-config-next/core-web-vitals\";",
+      "import nextTs from \"eslint-config-next/typescript\";",
+      "",
+      "const eslintConfig = defineConfig([",
+      "...nextVitals,",
+      "...nextTs,",
+      "// Override default ignores of eslint-config-next.",
+      "globalIgnores([",
+      "// Default ignores of eslint-config-next:"
+    ],
+    "next-env.d.ts": [
+      "/// <reference types=\"next\" />",
+      "/// <reference types=\"next/image-types/global\" />",
+      "import \"./.next/dev/types/routes.d.ts\";",
+      "",
+      "// NOTE: This file should not be edited",
+      "// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.",
+      ""
+    ],
+    "next.config.ts": [
+      "import type { NextConfig } from \"next\";",
+      "",
+      "const nextConfig: NextConfig = {",
+      "/* config options here */",
+      "reactCompiler: true,",
+      "};",
+      "",
+      "export default nextConfig;",
+      ""
+    ],
+    "package-lock.json": [
+      "{",
+      "\"name\": \"video-blog-suggester\",",
+      "\"version\": \"0.1.0\",",
+      "\"lockfileVersion\": 3,",
+      "\"requires\": true,",
+      "\"packages\": {",
+      "\"\": {",
+      "\"name\": \"video-blog-suggester\",",
+      "\"version\": \"0.1.0\",",
+      "\"dependencies\": {"
+    ],
+    "package.json": [
+      "{",
+      "\"name\": \"video-blog-suggester\",",
+      "\"version\": \"0.1.0\",",
+      "\"private\": true,",
+      "\"scripts\": {",
+      "\"dev\": \"next dev\",",
+      "\"build\": \"next build\",",
+      "\"start\": \"next start\",",
+      "\"lint\": \"eslint\"",
+      "},"
+    ],
+    "postcss.config.mjs": [
+      "const config = {",
+      "plugins: {",
+      "\"@tailwindcss/postcss\": {},",
+      "},",
+      "};",
+      "",
+      "export default config;",
+      ""
+    ],
+    "project-list.md": [
+      "## Overall",
+      "",
+      "This app is a tool that ingests all WDS videos and blog articles. These videos/articles are chunked using proper hierarchy and then converted to vector embeddings via AI for easy lookup. Later the user will search for results and their search query will be converted to a vector embedding to search our vector database.",
+      "",
+      "## User Flow",
+      "",
+      "1. User logs in with GitHub so we can properly track/rate limit users to avoid abuse and cost issues",
+      "2. User searches for a topic they want to learn",
+      "3. User chooses a result from the list to view and it opens that result in a new page at the location where the topic is covered",
+      "4. If user sends too many searches in a specified time they will be rate limited"
+    ],
+    "README.md": [
+      "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).",
+      "",
+      "## Getting Started",
+      "",
+      "First, run the development server:",
+      "",
+      "```bash",
+      "npm run dev",
+      "# or",
+      "yarn dev"
+    ],
+    "tsconfig.json": [
+      "{",
+      "\"compilerOptions\": {",
+      "\"target\": \"ES2017\",",
+      "\"lib\": [\"dom\", \"dom.iterable\", \"esnext\"],",
+      "\"allowJs\": true,",
+      "\"skipLibCheck\": true,",
+      "\"strict\": true,",
+      "\"noEmit\": true,",
+      "\"esModuleInterop\": true,",
+      "\"module\": \"esnext\","
+    ]
+  },
+  "importantFolders": [
+    {
+      "path": "public",
+      "category": "assets",
+      "fileCount": 5
+    },
+    {
+      "path": "src\\app",
+      "category": "frontend",
+      "fileCount": 4,
+      "primaryLanguage": "TypeScript"
+    }
+  ],
+  "readmeParagraphs": {
+    "root": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app)."
+  },
+  "totals": {
+    "numFiles": 21,
+    "numDirs": 6,
+    "totalSizeBytes": 274086,
+    "totalLinesOfCode": 116
+  },
+  "fileCategories": {
+    "other": 10,
+    "documentation": 4,
+    "source": 4,
+    "config": 3
+  },
+  "linesOfCodePerLanguage": {
+    "TypeScript": 116
+  },
+  "filesPerLanguage": {
+    "TypeScript": 4
+  },
+  "projectTypes": [
+    "JavaScript/Node.js"
+  ],
+  "frameworks": [
+    "React",
+    "Next.js"
+  ],
+  "entryPoints": [],
+  "ciCdTools": [],
+  "packageManagers": [
+    "npm/yarn"
+  ],
+  "topLevelDirectories": [
+    {
+      "name": "src",
+      "numFiles": 4,
+      "totalLoc": 100,
+      "dominantLanguage": "TypeScript"
+    },
+    {
+      "name": "public",
+      "numFiles": 5,
+      "totalLoc": 0
+    }
+  ],
+  "detailedDirectories": [
+    {
+      "path": "src",
+      "name": "src",
+      "level": 1,
+      "numFiles": 4,
+      "totalLoc": 100,
+      "dominantLanguage": "TypeScript",
+      "category": "General",
+      "description": "General module with 4 files (TypeScript)",
+      "subdirectories": [
+        {
+          "path": "src\\app",
+          "name": "app",
+          "level": 2,
+          "numFiles": 4,
+          "totalLoc": 100,
+          "dominantLanguage": "TypeScript",
+          "category": "Application",
+          "description": "Application module with 4 files (TypeScript)",
+          "subdirectories": []
+        }
+      ]
+    },
+    {
+      "path": "public",
+      "name": "public",
+      "level": 1,
+      "numFiles": 5,
+      "totalLoc": 0,
+      "category": "General",
+      "description": "General module with 5 files",
+      "subdirectories": []
+    }
+  ],
+  "architecturalInsights": {
+    "coreApplications": [],
+    "entryPointDetails": [],
+    "serviceArchitecture": {
+      "microservices": [],
+      "monoliths": [],
+      "libraries": []
+    },
+    "layeredArchitecture": {
+      "presentation": [],
+      "business": [],
+      "data": [],
+      "infrastructure": []
+    }
+  },
+  "largeFiles": [],
+  "dependencies": {
+    "production": [
+      "next",
+      "react",
+      "react-dom"
+    ],
+    "development": [
+      "@tailwindcss/postcss",
+      "@types/node",
+      "@types/react",
+      "@types/react-dom",
+      "babel-plugin-react-compiler",
+      "eslint",
+      "eslint-config-next",
+      "tailwindcss",
+      "typescript"
+    ],
+    "total": 12
+  },
+  "complexity": {
+    "averageFileSize": 5.523809523809524,
+    "maxFileSize": 0,
+    "nestedDepth": 0,
+    "estimatedComplexity": "low"
+  },
+  "gitRepo": {
+    "firstCommitDate": "2026-07-15",
+    "totalCommits": 2,
+    "numContributors": 0,
+    "currentBranch": "main",
+    "remoteUrls": [
+      "https://github.com/rohangakhare/video-blog-suggester-yt.git"
+    ]
+  }
+}
