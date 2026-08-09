@@ -16,6 +16,7 @@ export const auth = betterAuth({
       generateId: "uuid"
     }
   },
+  secret: process.env.BETTER_AUTH_SECRET,
   socialProviders: {
     github: {
       clientId: process.env.GITHUB_CLIENT_ID!,
